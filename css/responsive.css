@@ -25,7 +25,7 @@
   background-color: purple;
 }
 
-/* Phạm vi ảnh hưởng sẽ lớn hơn hoặc lớn hơn 1200px */
+/* Phạm vi ảnh hưởng sẽ lớn hơn hoặc lớn hơn = 1200px */
 @media screen and (min-width: 768px) {
   .demo2 {
     background-color: yellow;

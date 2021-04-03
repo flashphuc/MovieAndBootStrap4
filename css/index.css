@@ -166,6 +166,23 @@ header p {
   border: none;
   color: white;
 }
+
+.movieTrailer a:hover {
+  text-decoration: none;
+}
+
+.movieTrailer a button:hover {
+  /* 1000ms  = 1s */
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  /* direction: Đảo ngược thứ tự; */
+  /* animation-fill-mode: Đảo ngược thứ tự hiệu ứng; */
+  /* animation: full 5s linear 0s infinite direction fill-mode; */
+  transition: all 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+  text-decoration: none;
+  background: #ec7532;
+  outline: none;
+  box-shadow: none;
+}
 .carousel-item button i {
   margin-right: 9px;
 }
@@ -174,10 +191,10 @@ header p {
   background: white;
 }
 
-.carousel-item button:hover {
+/* .carousel-item button:hover {
   background: orange;
   transition: all 0.5s;
-}
+} */
 /* END CAROUSEL CSS */
 
 /* New IN CSS */
@@ -259,6 +276,17 @@ header p {
   font-size: 16px;
 }
 
+.newIn__play a {
+  color: white;
+}
+
+.newIn__play a:hover {
+  color: white;
+  text-decoration: none;
+  /* transform: scale(0.5); */
+  /* transition: all 0.5s; */
+}
+
 .newIn__img:hover .newIn__overlay {
   transform: translateX(-22%) skewX(30deg);
 }
@@ -293,6 +321,11 @@ header p {
 
 .showTimes {
   padding-top: 80px;
+  margin-top: 6rem;
+}
+
+.showTimes ul {
+  font-size: 18px;
 }
 
 .showTimes .nav-tabs .nav-link {
@@ -327,6 +360,14 @@ header p {
   border: white;
 }
 
+a.text-warning {
+  text-decoration: none;
+}
+
+.tab-pane a img {
+  border-radius: 10px;
+}
+
 span.time-special {
   width: 35px;
   height: 35px;
@@ -354,7 +395,7 @@ span.time-special {
   /* position: relative; */
   background-color: rgba(0, 0, 0, 0.9);
   color: white;
-  height: 30rem;
+  /* height: 30rem; */
   background-size: cover;
   background-position: center;
   padding: 2rem;
@@ -446,6 +487,17 @@ span.time-special {
 .movie__footer ul li {
   list-style: none;
   /* color: #d8d8d8; */
+  transition: all 0.5s;
+  line-height: 2rem;
+}
+
+.movie__footer ul {
+  margin-top: 1rem;
+}
+
+.movie__footer ul li:hover a {
+  color: #fbbd61;
+  transition: all 0.5s;
 }
 
 .movie__footer ul li a {
@@ -455,6 +507,11 @@ span.time-special {
 
 .movie__footer h6 {
   color: #ec7532;
+  font-size: 1.2rem;
+}
+
+.movie__footer i {
+  margin-right: 1rem;
 }
 
 .footer__copyright {
@@ -462,4 +519,62 @@ span.time-special {
   border-top: 1px solid gray;
   padding: 1rem 0;
 }
+
+.footer__copyright a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer__copyright a:hover {
+  color: #fbbd61;
+}
 /* END FOOTER MOVIE CSS */
+
+/* MOVIELIST CSS */
+.movielist img {
+  width: 100%;
+  cursor: pointer;
+  opacity: 0.5;
+  border-radius: 10px;
+}
+.movielist {
+  /* margin-top: 3rem; */
+  background: #101010;
+  padding: 5rem 12rem;
+}
+
+.movielist__details {
+  text-align: center;
+  cursor: pointer;
+}
+
+.movielist__details p {
+  margin: 0px;
+  color: white;
+  opacity: 0.5;
+}
+
+.movielist img:hover,
+.movielist p:hover {
+  opacity: 1;
+}
+/* END MOVIE LIST CSS */
+@keyframes full {
+  /* 1 chu kỳ / 1 lần chuyển động */
+  /* 100s */
+  0% {
+  }
+  25% {
+    width: 25%;
+  }
+  50% {
+    width: 50%;
+  }
+
+  75% {
+    width: 75%;
+  }
+  100% {
+    width: 100%;
+  }
+}
